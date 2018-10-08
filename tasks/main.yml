@@ -1,0 +1,22 @@
+---
+# - name: Setup User(s)
+#   import_role:
+#     name: grog.user
+- name: foobar
+  debug:
+    # msg: "Name: {{ item.0.name }}; Key: {{ item.1 | dict2items | .key }}"
+    msg: "Hi"
+  loop: "{{ [user_list, user_list_host, user_list_group] | flatten | (subelements('git_config') | dict2items) }}"
+
+
+# - name: Bash | Git Global Config
+#   git_config:
+#     name: "{{ item.name }}"
+#     value: "{{ item.value }}"
+#     scope: global
+#   loop:
+#     - { name: 'user.email', value: 'nshenry03@gmail.com' }
+#     - { name: 'user.name', value: 'Nick Henry' }
+#     - { name: 'user.signingkey', value: '4AFE58C3' }
+#   become: yes
+#   become_user: nhenry
