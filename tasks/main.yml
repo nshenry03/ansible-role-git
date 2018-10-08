@@ -10,5 +10,6 @@
 #     value: "{{ item.1.value }}"
 #     scope: global
 #   loop: "{{ user_list | subelements('git_config') }}"
+#   loop: "{{ [user_list, user_list_host, user_list_group] | flatten | subelements('git_config') }}"
 #   become: yes
 #   become_user: "{{ item.0.name }}"
