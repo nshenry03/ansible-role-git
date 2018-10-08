@@ -16,5 +16,5 @@ galaxy_info:
     - name: Ubuntu
       versions:
       - all
-dependencies:
-    - src: grog.user
+# dependencies:
+#     - src: grog.user

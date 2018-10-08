@@ -4,17 +4,14 @@
   vars:
     user_list:
       - name: john.doe
-        email: john.doe@work.example.com
         git_config:
           - user.name: John Doe
           - user.email: john.doe@example.com
           - user.signingkey: 0A46826A
       - name: jane.doe
-        email: jane.doe@work.example.com
         git_config:
           - user.name: Jane Doe
-          - user.email: jane.doe@example.com
-          - user.signingkey: 3AA5C34371567BD2
+          - diff.tool: meld
 
   pre_tasks:
     - name: Update apt cache.
